@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <title>ToDoList</title>
+        
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        
+        <link rel="stylesheet" href="css/style.css">
+        <script src="bootstrap/js/bootstrap.js"></script>
+        <script src="bootstrap/js/bootstrap.min.js"></script>
+        
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+        
+    </head>
+    <body>
+        <nav class="hidden-xs navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="nav-header">
+                    <a class="navbar-brand" href="#home">ToDoList</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    
+                    <li><a href="#">To Do List</a></li>
+                    <li><a href="#timer">Timer</a></li>
+                    <li><a href="#todolist">View To Do List</a></li>
+                    <li><a href="#counter">Counter</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"> Login</span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"> SignUp</span></a></li>
+                </ul>
+            </div>
+        </nav>
+        
+<!--
+        <nav class="hidden-xs navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="nav-header">
+                    <a class="navbar-brand" href="#home">ToDoList</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    
+                    <li><a href="#">To Do List</a></li>
+                    <li><a href="#timer">Timer</a></li>
+                    <li><a href="#todolist">View To Do List</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-log-in"> Login</span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"> SignUp</span></a></li>
+                </ul>
+            </div>
+        </nav>
+-->
+        
+        
+        
+        <section class="homePage container">
+            <div class="row">
+                <div class="col-md-2">
+                </div>
+                
+                <div class="col-md-8 displayContent">
+                    <h3>To Do List</h3>
+                    <hr>
+                    <input type="text" placeholder="Title" id="subject">
+                    <input type="date" id="dateIn">
+                    <textarea id="description">Description</textarea><br>
+                    
+                    <button  ><a onclick="toDoList()">Add</a> </button>
+                    <button> <a href="#todolist">View List</a> </button>
+                    <button> <a href="#timer">Timer</a> </button>
+                    <button> <a href="#counter">Counter</a> </button>
+                    
+                </div>
+                
+                <div class="col-md-2">
+                </div>
+            </div>
+        </section>
+        
+        <!-- ------------------ Timer ----------------------->
+        <section class="timer container" id="timer">
+            <div class="row">
+                <div class="col-md-12 timerDisplay">
+                    <h3>Timer</h3>
+                    <hr>
+                    <div id="timer-Display"></div>
+                    
+                </div>
+            </div>
+        </section>
+        
+        <!-- ------------------ ToDoList ----------------------->
+        
+        <section class="todolist container" id="todolist">
+            <div class="row">
+                <div class="col-md-2">
+                </div>
+                
+                <div class="col-md-8" id="displayContent">
+                    <h3>To Do List</h3>
+                    <hr>
+                    <ul id="todomenue"></ul>
+                    
+                </div>
+                    
+                <div class="col-md-2">
+                </div>
+            </div>
+        </section>
+        
+        <!-- ------------------ Counter ----------------------->
+        
+        <section class="counter container" id="counter">
+            
+            <div class="row">
+                <div class="col-md-12 counterDisplay">
+                    <h3>Counter</h3>
+                    <hr>
+                    <div id="counter-Buttons">
+                        <button onclick="startTimer()">start</button>
+                        <button onclick="stopTimer()">stop</button>
+                        <button onclick="resetTimer()">reset</button>
+                    </div><hr>
+                    <div id="counter-Display">00:00:00</div>
+                    
+                </div>
+            </div>
+            
+        </section>
+        
+      <!-- ------------------ TicTacToe ----------------------->
+        <section class="ticTacToe container" id="tictactoe">
+            
+            <div class="row">
+                <div class="col-md-2 score">
+                    <h3>Player1</h3>
+                    <hr>
+                </div>
+                <div class="col-md-8 tictactoeDisplay">
+                    <h3>Tic Tac Toe</h3>
+                    <hr>
+                    
+                    <div id="tictactoe-Display" class="container">
+<!--                        <div class="row tic">-->
+<!--                            <div class="col-md-12 tic">-->
+                                <span class="ticTacToeButtons"> af </span>
+                                <span class="ticTacToeButtons">ad </span>
+                                <span class="ticTacToeButtons">asd </span><br>
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="row tic">-->
+<!--                            <div class="col-md-12 tic">-->
+                                <span class="ticTacToeButtons"> asdf </span>
+                                <span class="ticTacToeButtons"> asdf </span>
+                                <span class="ticTacToeButtons"> asd </span><br>
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="row tic">-->
+<!--                            <div class="col-md-12 tic">-->
+                                <span class="ticTacToeButtons"> asdf </span>
+                                <span class="ticTacToeButtons"> asdf </span>
+                                <span class="ticTacToeButtons"> asdf </span>
+<!--                            </div>-->
+<!--                        </div>-->
+                    </div>
+                    
+                </div>
+                <div class="col-md-2 score">
+                    <h3>Player2</h3>
+                    <hr>
+                </div>
+            </div>
+            <br><br><br><br><br><br><br><br><br>
+            
+        </section>
+        
+        <script src="javascript/custom.js"></script>
+        
+    </body>
+    
+    
+    
+    
+</html>
