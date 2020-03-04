@@ -1,0 +1,44 @@
+body{
+    text-align:  center;
+    padding: 5%;
+}
+.input-form{
+    text-align: center;
+    justify-content: center;
+}
+
+.recipe-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    padding: 5px;
+}
+.recipe-title{
+    display: inline-block;
+    text-align: left;
+    padding-right: 10px;
+    width: 400px;
+}
+.recipe-img{
+    display: inline-block;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.star{
+    display: inline;
+    text-align: left;
+    cursor: pointer;
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+.nav-bar{
+    display: inline-block;
+    float: left;
+    font-size: 20px;
+}
